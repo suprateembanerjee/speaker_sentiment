@@ -22,9 +22,6 @@ body.write('We are trying to record audio in a webapp and trying to analyze sent
 
 wav_audio_data = st_audiorec()
 
-graphs = st.container()
-
-
 def spectrogram_callback():
 	with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as temp_file:
 		temp_file.write(wav_audio_data)
